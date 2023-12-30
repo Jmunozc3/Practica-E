@@ -9,13 +9,5 @@ import mongoose from "npm:mongoose@8.0.3";
     console.info("MongoDB connected");
 
 
-    const server = new ApolloServer({
-        typeDefs,
-        resolvers: {
-            Mutation,
-            Query,
-        },
-    });
-
-    const { url } = await startStandaloneServer(server);
+    
     console.log(`Server ready at ${url}`);
