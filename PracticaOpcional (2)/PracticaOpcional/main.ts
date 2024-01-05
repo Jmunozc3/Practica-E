@@ -1,10 +1,11 @@
-import { ApolloServer } from "@apollo/server";
-import { startStandaloneServer } from "@apollo/server/standalone";
+import { ApolloServer } from "@apollo/server/index.ts";
+import { startStandaloneServer } from "@apollo/server/standalone/index.ts";
 import { Mutation } from "./resolvers/mutation.ts";
 import { typeDefs } from "./gql/schema.ts";
 import mongoose from "npm:mongoose@8.0.0";
 import { Query } from "./resolvers/query.ts";
 import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
+
 
 // connecto to MongoDB
 const env = await load();
